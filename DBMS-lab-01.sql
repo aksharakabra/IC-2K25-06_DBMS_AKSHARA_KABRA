@@ -8,7 +8,7 @@ create database mydb;
 use mydb;
 -- This command selects the 'mydb' database for use
 
--- now we will create a table names anything we want, here we will create a table named "students"
+-- now we will create a table names anything we want, here we will create a table named 'students'
 create table students(roll int, name varchar(30), class varchar(20), marks float, primary key(roll));
 -- here varchar(30) is right and it can never be written as varchar[30]
 -- primary key(roll) means that the roll number will be unique for each student and cant be null
