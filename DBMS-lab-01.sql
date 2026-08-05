@@ -27,6 +27,7 @@ insert into students(roll, name, class, marks) value(06, "akshara", "mca III", 9
 
 -- it can also be written as
 insert into students value(11, "anjali", "mca III", 88);
+-- the professional way is to write "values" instead of "value" but both are correct and will work fine.
 
 select * from students;
 -- This command will show all records from the 'students' table and displays them.
