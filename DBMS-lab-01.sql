@@ -8,6 +8,9 @@ create database mydb;
 use mydb;
 -- This command selects the 'mydb' database for use
 
+select database();
+-- it checks what database is selected
+
 -- now we will create a table names anything we want, here we will create a table named 'students'
 create table students(roll int, name varchar(30), class varchar(20), marks float, primary key(roll));
 -- here varchar(30) is right and it can never be written as varchar[30]
@@ -38,4 +41,7 @@ update students set marks=100 where roll=06;
 
 delete from students where roll=11;
 -- This command deletes the record of the student with roll number 11 from the table
+
+create table dup_students like students;
+-- makes a duplicate of a table as it is
 
