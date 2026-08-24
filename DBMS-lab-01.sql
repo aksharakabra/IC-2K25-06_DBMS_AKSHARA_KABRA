@@ -43,5 +43,11 @@ delete from students where roll=11;
 -- This command deletes the record of the student with roll number 11 from the table
 
 create table dup_students like students;
--- makes a duplicate of a table as it is
+-- makes a duplicate of a table but only the headings
 
+CREATE TABLE dup_countries AS
+SELECT * FROM countries;
+-- makes a duplicate of a table heading+data 
+
+DROP TABLE dup_countries;
+-- deletes the table
