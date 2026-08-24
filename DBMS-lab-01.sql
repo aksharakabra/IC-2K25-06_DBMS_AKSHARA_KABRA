@@ -1,53 +1,45 @@
-show databases;
--- here the word "databases" is imp and cant be written database 
--- and this command will show all the databases present in the MySQL server.
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dblab1             |
+| dbms               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
 
-create database mydb;
--- This command creates a new database named 'mydb'
+mysql> create database mydb;
+Query OK, 1 row affected (0.04 sec)
 
-use mydb;
--- This command selects the 'mydb' database for use
+mysql> select database();
++------------+
+| database() |
++------------+
+| NULL       |
++------------+
+1 row in set (0.00 sec)
 
-select database();
--- it checks what database is selected
+mysql> create table students(roll int, name varchar(30), class varchar(20), marks float, primary key(roll));
+ERROR 1046 (3D000): No database selected
+mysql> use mydb;
+Database changed
+mysql> create table students(roll int, name varchar(30), class varchar(20), marks float, primary key(roll));
+Query OK, 0 rows affected (0.06 sec)
 
--- now we will create a table names anything we want, here we will create a table named 'students'
-create table students(roll int, name varchar(30), class varchar(20), marks float, primary key(roll));
--- here varchar(30) is right and it can never be written as varchar[30]
--- primary key(roll) means that the roll number will be unique for each student and cant be null
+mysql> insert into students(roll, name, class, marks) value(06, "akshara", "mca III", 98);
+Query OK, 1 row affected (0.01 sec)
 
-show tables;
--- This command will show all the tables present in the selected database
--- here the word "tables" can not be written as table
+mysql> insert into students value(11, "anjali", "mca III", 88);
+Query OK, 1 row affected (0.03 sec)
 
-desc students;
--- This will show the structure of the 'students' table, including column names, data types, and constraints.
--- desc is short for describe and can also be written as describe students;
-
-insert into students(roll, name, class, marks) value(06, "akshara", "mca III", 98);
--- This command inserts a new record into the 'students' table with the specified values for roll, name, class, and marks.
--- Note that the roll number must be unique due to the primary key constraint.
-
--- it can also be written as
-insert into students value(11, "anjali", "mca III", 88);
--- the professional way is to write "values" instead of "value" but both are correct and will work fine.
-
-select * from students;
--- This command will show all records from the 'students' table and displays them.
-
-update students set marks=100 where roll=06;
--- This command updates the marks of the student with roll number 06 to 100.
--- but if we didnt specify the roll number, it would update the marks for all students in the table.
-
-delete from students where roll=11;
--- This command deletes the record of the student with roll number 11 from the table
-
-create table dup_students like students;
--- makes a duplicate of a table but only the headings
-
-CREATE TABLE dup_countries AS
-SELECT * FROM countries;
--- makes a duplicate of a table heading+data 
-
-DROP TABLE dup_countries;
--- deletes the table
+mysql> select * from students;
++------+---------+---------+-------+
+| roll | name    | class   | marks |
++------+---------+---------+-------+
+|    6 | akshara | mca III |    98 |
+|   11 | anjali  | mca III |    88 |
++------+---------+---------+-------+
+2 rows in set (0.00 sec)
