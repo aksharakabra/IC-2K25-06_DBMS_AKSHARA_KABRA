@@ -50,5 +50,5 @@
 SELECT * FROM countries;</h3>
 -- makes a duplicate of a table heading+data 
 
-DROP TABLE dup_countries;
+<h3>DROP TABLE dup_countries;</h3>
 -- deletes the table
