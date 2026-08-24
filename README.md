@@ -56,3 +56,13 @@ SELECT * FROM countries;</h3>
 
   <h3>drop database mydb;</h3>
 --deletes database
+
+  CREATE TABLE jobs (
+    job_id INT,
+    job_title VARCHAR(50),
+    min_salary DECIMAL(10,2),
+    max_salary DECIMAL(10,2),
+   <h3> CHECK (max_salary <= 25000)</h3>
+);
+     --checking constraints
+  
