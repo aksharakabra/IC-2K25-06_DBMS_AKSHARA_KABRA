@@ -16,6 +16,7 @@
 <h3>create table students(roll int, name varchar(30), class varchar(20), marks float, primary key(roll));</h3>
 -- here varchar(30) is right and it can never be written as varchar[30]
 -- primary key(roll) means that the roll number will be unique for each student and cant be null
+--apart from int ,varchar and char we can use null and not null if we want the coloumn to be null or not null
 
 <h3>show tables;</h3>
 -- This command will show all the tables present in the selected database
@@ -52,3 +53,6 @@ SELECT * FROM countries;</h3>
 
 <h3>DROP TABLE dup_countries;</h3>
 -- deletes the table
+
+  <h3>drop database mydb;</h3>
+--deletes database
