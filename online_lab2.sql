@@ -1,4 +1,4 @@
-
+--  order by clause, group by clause and count
 mysql> use dblab1;
 Database changed
 mysql> INSERT INTO employee VALUES
