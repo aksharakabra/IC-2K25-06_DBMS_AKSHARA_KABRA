@@ -1,3 +1,5 @@
+--8. Write a SQL statement to create a table named job_histry including columns employee_id, start_date, end_date, job_id and 
+-- department_id and make sure that the value against column end_date will be entered at the time of insertion to the format like '--/--/----'.- 
 mysql> use dblab1;
 Database changed
 mysql> CREATE TABLE job_histry (
