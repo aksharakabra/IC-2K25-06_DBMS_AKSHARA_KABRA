@@ -18,6 +18,7 @@
 -- here varchar(30) is right and it can never be written as varchar[30]
 -- primary key(roll) means that the roll number will be unique for each student and cant be null
 --apart from int ,varchar and char we can use null and not null if we want the coloumn to be null or not null
+-- order or any reserved words cant be used
 
 <h3>show tables;</h3>
 -- This command will show all the tables present in the selected database
