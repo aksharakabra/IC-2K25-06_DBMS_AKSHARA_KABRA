@@ -5,6 +5,7 @@
 
 <h3>create database mydb;</h3>
 -- This command creates a new database named 'mydb'
+-- hyphen is not allowed
 
 <h3>use mydb;</h3>
 -- This command selects the 'mydb' database for use
