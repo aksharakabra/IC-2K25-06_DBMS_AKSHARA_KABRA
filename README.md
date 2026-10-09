@@ -39,6 +39,9 @@
 <h3>select * from students;</h3>
 -- This command will show all records from the 'students' table and displays them.
 
+<h3>select from employees where salary>( select salary from employees where last_name ="bull");</h3>
+-- select with condition  
+
 <h3>update students set marks=100 where roll=06;</h3>
 -- This command updates the marks of the student with roll number 06 to 100.
 -- but if we didnt specify the roll number, it would update the marks for all students in the table.
@@ -67,4 +70,9 @@ SELECT * FROM countries;</h3>
    <h3> CHECK (max_salary <= 25000)</h3>
 );
      --checking constraints
-  
+
+<h3>alter table employees add location varchar(10);</h3>
+     --for altering and adding
+
+<h3> SELECT first_name, last_name, salary FROM employees e WHERE salary = ( SELECT MIN(salary) FROM employees WHERE post = e.post);</h3>
+     --here the e alias is really imp 
