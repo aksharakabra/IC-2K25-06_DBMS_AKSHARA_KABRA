@@ -76,3 +76,7 @@ SELECT * FROM countries;</h3>
 
 <h3> SELECT first_name, last_name, salary FROM employees e WHERE salary = ( SELECT MIN(salary) FROM employees WHERE post = e.post);</h3>
      --here the e alias is really imp 
+<h3>SELECT first_name, last_name, salary from employees where department= "IT" and salary >(select avg(salary) from employees);</h3>
+-- in where condition "and", "or" is used
+-- avg(salary) gets average salary
+     -- same we can have min(salary)
