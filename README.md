@@ -80,3 +80,18 @@ SELECT * FROM countries;</h3>
 -- in where condition "and", "or" is used
 -- avg(salary) gets average salary
      -- same we can have min(salary)
+
+<h3>SELECT first_name, last_name FROM employees WHERE job_id <> 'supervisor';</h3>
+--<> is not equal
+
+<h3> order by salary asc;</h3>
+--ascending order
+
+<h3>ALTER TABLE employees ADD emp_id INT AUTO_INCREMENT PRIMARY KEY;</h3>
+--like in oracle non validate
+
+<h3>SELECT * FROM ( SELECT employees.*, ROW_NUMBER() OVER (ORDER BY emp_id) AS row_num FROM employees) AS e WHERE row_num % 2 = 0;</h3>
+-- for even rows
+
+<h3>SELECT salary FROM ( SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk FROM employees) AS ranked_salaries WHERE rnk = 5;</h3>
+--for fifth max salary
