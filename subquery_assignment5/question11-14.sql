@@ -263,31 +263,3 @@ mysql> select * from employees;
 | jasmine    | tata      |   6000 | warehousing | sh_clerk    | IN       | grade 1   |  78967 |
 +------------+-----------+--------+-------------+-------------+----------+-----------+--------+
 13 rows in set (0.00 sec)
-
-  -- 15. Write a query to fetch even numbered records from employees table.
-mysql> select * from employees where emp_id % 2 = 0;
-+------------+-----------+--------+-------------+------------+----------+-----------+--------+
-| first_name | last_name | salary | department  | job_id     | location | job_grade | emp_id |
-+------------+-----------+--------+-------------+------------+----------+-----------+--------+
-| ethan      | blackwood | 900000 | IT          | manager    | US       | grade 3   |  19246 |
-| alex       | carpanter |   7000 | IT          | intern     | US       | grade 1   |  19248 |
-| kenta      | yamaguchi | 300000 | finance     | supervisor | JA       | grade 2   |  23676 |
-| carl       | bell      | 600000 | finance     | manager    | IN       | grade 3   |  23678 |
-| kyle       | williams  |   5000 | HR          | intern     | US       | grade 1   |  56474 |
-| kim        | sohyun    |   9000 | warehousing | sh_clerk   | KO       | grade 1   |  78966 |
-+------------+-----------+--------+-------------+------------+----------+-----------+--------+
-6 rows in set (0.03 sec)
---  or 
-  -- 15. Write a query to fetch even numbered records from employees table.
-mysql> SELECT * FROM ( SELECT employees.*, ROW_NUMBER() OVER (ORDER BY emp_id) AS row_num FROM employees ) AS e WHERE row_num % 2 = 0;
-+------------+-----------+--------+-------------+-------------+----------+-----------+--------+---------+
-| first_name | last_name | salary | department  | job_id      | location | job_grade | emp_id | row_num |
-+------------+-----------+--------+-------------+-------------+----------+-----------+--------+---------+
-| sofie      | stewart   |  90000 | IT          | team leader | US       | grade 2   |  19247 |       2 |
-| aouki      | nakayama  | 500000 | IT          | supervisor  | JA       | grade 2   |  19249 |       4 |
-| min        | heseung   |   6900 | finance     | intern      | KO       | grade 1   |  23677 |       6 |
-| william    | bull      |  80000 | finance     | team leader | IN       | grade 2   |  23679 |       8 |
-| kyle       | williams  |   5000 | HR          | intern      | US       | grade 1   |  56474 |      10 |
-| kim        | sohyun    |   9000 | warehousing | sh_clerk    | KO       | grade 1   |  78966 |      12 |
-+------------+-----------+--------+-------------+-------------+----------+-----------+--------+---------+
-6 rows in set (0.03 sec)
