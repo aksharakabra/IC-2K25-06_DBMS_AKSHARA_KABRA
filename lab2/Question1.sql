@@ -1,5 +1,3 @@
-mysql> create table dblab1;
-ERROR 1046 (3D000): No database selected
 mysql> create database dblab1;
 Query OK, 1 row affected (0.07 sec)
 
