@@ -93,6 +93,8 @@ SELECT * FROM countries;</h3>
 <h3>SELECT * FROM ( SELECT employees.*, ROW_NUMBER() OVER (ORDER BY emp_id) AS row_num FROM employees) AS e WHERE row_num % 2 = 0;</h3>
 -- for even rows
 
+  <h3>SELECT first_name, last_name, department_id FROM employees WHERE department_id IN (30, 100) ORDER BY department_id ASC; </h3>
+
 <h3>SELECT salary FROM ( SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk FROM employees) AS ranked_salaries WHERE rnk = 5;</h3>
 --for fifth max salary
 
