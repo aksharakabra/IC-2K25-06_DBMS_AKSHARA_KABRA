@@ -95,3 +95,6 @@ SELECT * FROM countries;</h3>
 
 <h3>SELECT salary FROM ( SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk FROM employees) AS ranked_salaries WHERE rnk = 5;</h3>
 --for fifth max salary
+
+  <h3>select first_name, last_name, salary from employees where salary not between 10000 and 15000;</h3>
+  --not between is range
