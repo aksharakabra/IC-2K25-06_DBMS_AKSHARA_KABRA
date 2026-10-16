@@ -100,3 +100,11 @@ SELECT * FROM countries;</h3>
 
   <h3>select first_name, last_name, salary from employees where salary not between 10000 and 15000;</h3>
   --not between is range
+
+<h3>WHERE LENGTH(last_name) = 6;</h3>
+--length() is a function to count length
+
+<h3>❌ job_id = "programmer" OR "sh_clerk"
+✅ job_id = "programmer" OR job_id = "sh_clerk"
+or
+✅ job_id IN ("programmer", "sh_clerk")</h3>
