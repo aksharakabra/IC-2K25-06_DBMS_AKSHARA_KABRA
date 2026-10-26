@@ -104,13 +104,19 @@ SELECT * FROM countries;</h3>
 <h3>WHERE LENGTH(last_name) = 6;</h3>
 --length() is a function to count length
 
-<h3>❌ job_id = "programmer" OR "sh_clerk"
-✅ job_id = "programmer" OR job_id = "sh_clerk"
+<h3> (job_id = "programmer" OR "sh_clerk") --wrong way
+ job_id = "programmer" OR job_id = "sh_clerk"
 or
-✅ job_id IN ("programmer", "sh_clerk")</h3>
+ job_id IN ("programmer", "sh_clerk")</h3>
 
   <h3>select first_name from employees where first_name like "%b%" and first_name like "%c%" ;</h3>
   --here % shows random character
   --same for
   <h3>last_name like "__e%";</h3>
   --__shows second place
+
+  <h3>select first_name as "FIRST NAME"</h3>
+  -- to create alias
+
+  <h3> select distinct dep_id</h3>
+  --to get unique id
