@@ -1,0 +1,1 @@
+-- 11. Write a query get all first name from employees table in upper case.
