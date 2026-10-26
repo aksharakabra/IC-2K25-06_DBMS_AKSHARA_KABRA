@@ -38,5 +38,3 @@ mysql> select count(distinct job_id) as "jobs available" from employees;
 |              6 |
 +----------------+
 1 row in set (0.03 sec)
-
-my
