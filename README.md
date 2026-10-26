@@ -117,6 +117,15 @@ or
 
   <h3>select first_name as "FIRST NAME"</h3>
   -- to create alias
-
+  
   <h3> select distinct dep_id</h3>
   --to get unique id
+  
+  <h3>salary* 15/100 as pf from employees;</h3>
+--to display pf or any formula
+
+  <h3>select sum(salary) as "total salary" from employees;</h3>
+-- selecting a function, using sum function, using alias
+
+<h3>select count(distinct job_id) as "jobs available" from employees;</h3>
+-- count function counts, used distinct for unique id
