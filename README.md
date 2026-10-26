@@ -129,3 +129,15 @@ or
 
 <h3>select count(distinct job_id) as "jobs available" from employees;</h3>
 -- count function counts, used distinct for unique id
+
+  <h3> upper()</h3>
+  --for uppercase
+
+<h3>substring(first_name,1,3) </h3>
+--to get first 3 letters
+
+<h3>select concat(first_name,' ', last_name) as names from employees;</h3>
+--concat() joins the string, ' ' gave space
+
+<h3>trim(first_name)</h3>
+--it removes spaces on left and right
