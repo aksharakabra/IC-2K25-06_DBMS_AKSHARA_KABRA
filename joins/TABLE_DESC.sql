@@ -93,3 +93,13 @@ mysql> select * from students, teachers;
 |    6 | akshara | mca III |   100 |       20 |       50 | rahul      | DBMS        |
 +------+---------+---------+-------+----------+----------+------------+-------------+
 16 rows in set (0.00 sec)
+  -- no need for foreign key in joins
+mysql> alter table students drop foreign key students_ibfk_1;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into students values(50, "mayank", default, 69, 90);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into teachers values(80, "ragini", "IWP");
+Query OK, 1 row affected (0.03 sec)
