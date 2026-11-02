@@ -141,3 +141,15 @@ or
 
   <h3>select max(salary)-min(salary) from employees; </h3>
   --select query
+  
+<h3> alter table students alter column class set default 'mac III';</h3>
+-- for default constraint in altering
+
+<h3>insert into students values(25, "darshan", default, 97, 50);</h3>
+--default using in insertion
+
+<h3>show create table students;</h3>
+--detailed description
+
+<h3>select * from students, teachers;</h3>
+--product
