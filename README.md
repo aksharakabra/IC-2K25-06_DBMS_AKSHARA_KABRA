@@ -153,3 +153,10 @@ or
 
 <h3>select * from students, teachers;</h3>
 --product
+
+<h3>select s.roll, s.name, t.teach_name from students s right join teachers t on s.teach_id = t.teach_id;</h3>
+--change the name of join like left join, inner join
+--union left and right join to make full outer join
+
+<h3> select s.roll, s.name, t.teach_name from students s cross join teachers t;</h3>
+--cross join
